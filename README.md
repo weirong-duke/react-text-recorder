@@ -1,4 +1,16 @@
+#React Text Recorder
+
+I was doing some coding challenges and algorithm-based problems on Leetcode, Hackerrank, etc, and it occured to me that it might be an interesting idea to have a component that records the user typing and exports that recording as some type of file to be played back later. This would be useful to truly see how someone writes (or codes in this case); their mistakes as well as how they overcome those mistakes would be clear to see and follow.
+
+I initially had this working with two textareas, but realized that you cannot have higher level styling within a textarea (which would completely defeat the ideal of being able to use this as a base for any coding challenge). Additionally, I added react-testing-library (new and hip!) but realized that it has some limitations on testing contenteditables. Namely, that js-dom does not support contenteditable testing yet: https://github.com/testing-library/dom-testing-library/pull/235
+
+Anyway, I think this is a pretty interesting concept that could be utilized in a variety of ways. The base component should be lightweight, efficient (stores diffs efficiently, not the whole blob of text constantly), and highly malleable (very little necessary CSS, the user of the component should be able to update it how they like)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
@@ -16,29 +28,3 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
