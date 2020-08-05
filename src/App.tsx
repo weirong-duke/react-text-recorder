@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
 
-function App() {
+import TextRecorder from 'TextRecorder';
+import TextPlayer from 'TextPlayer';
+import {TextChange} from 'types';
+
+const App = () => {
+  const [changes, setChanges] = useState<TextChange[] | null>(null);
+  const handleSubmitTextRecorder = (data: TextChange[]) => {
+    setChanges(data);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={"Example"}>
+      <TextRecorder
+        className="recorder ide"
+        contentClassName={"ide__content"}
+        onSubmit={handleSubmitTextRecorder} />
+      <TextPlayer
+        className="recorder ansi"
+        // contentClassName={"ansi__content"}
+        changes={changes}
+        // submitClassName={"ansi__submit"}
+      />
     </div>
   );
-}
+};
 
-export default App;
+export default App

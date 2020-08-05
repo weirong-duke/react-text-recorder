@@ -1,0 +1,61 @@
+@keyframes Blink {
+  0% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.TextRecorder {
+  display: inline-block;
+  white-space: pre-wrap;
+  position: relative;
+
+  &__content {
+    outline: none;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    font-size: 28px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+
+    &--active {
+      animation: Blink 1s infinite;
+      color: red;
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+      height: 28px;
+      margin-right: 6px;
+      justify-content: center;
+    }
+
+    .action {
+      cursor: pointer;
+      margin-right: 6px;
+      height: 28px;
+      transition: color 0.5s;
+      z-index: 15;
+
+      &--record {
+        margin-left: auto;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      &--submit {
+        &:hover {
+          color: green;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Example {
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  .recorder {
+    font-family: "SF Mono","Monaco","Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+    margin: 12px;
+    outline: none;
+    width: 50%;
+  }
+
+  .ide {
+    background-color: #333333;
+    border-radius: 12px;
+    color: white;
+    &__content {
+      padding: 12px;
+      &:focus{
+        border-radius: 12px;
+      }
+    }
+  }
+  .ansi {
+    color: lime;
+    background-color: black;
+
+  }
+
+
+
+}
