@@ -1,4 +1,4 @@
-#React Text Recorder
+# React Text Recorder
 
 I was doing some coding challenges and algorithm-based problems on Leetcode, Hackerrank, etc, and it occured to me that it might be an interesting idea to have a component that records the user typing and exports that recording as some type of file to be played back later. This would be useful to truly see how someone writes (or codes in this case); their mistakes as well as how they overcome those mistakes would be clear to see and follow.
 
